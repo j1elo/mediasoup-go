@@ -62,7 +62,7 @@ var consumerDeviceCapabilities = RtpCapabilities{
 }
 
 func CreateRouter(workers ...*Worker) *Router {
-	myworker := worker
+	myworker := CreateTestWorker()
 	if len(workers) > 0 && workers[0] != nil {
 		myworker = workers[0]
 	}
